@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import './App.css';
+import HeshComp from './HeshComp';
 function App() {
 	const name = '얘는 스크립트입니다';
 	const if_state = 'if문은 못씁니다';
@@ -32,5 +33,8 @@ function App() {
 		</Fragment>
 	);
 }
-
+// HeshComp 컴포넌트를 불러와서 반환
+const comp = () => {
+	return <HeshComp />;
+};
 export default App;
