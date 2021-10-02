@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import './App.css';
 import HeshComp from './HeshComp';
+import Counter from './Counter'
 function App() {
 	const name = '얘는 스크립트입니다';
 	const if_state = 'if문은 못씁니다';
@@ -34,7 +35,10 @@ function App() {
 	);
 }
 // HeshComp 컴포넌트를 불러와서 반환
-const comp = () => {
-	return <HeshComp />;
+const HeshComp_f = () => {
+	return <HeshComp name='asdf'> ㅁㄴㅇㄹ </HeshComp>;
 };
-export default App;
+const Counter_f = () => {
+	return <Counter />;
+};
+export default Counter_f;
