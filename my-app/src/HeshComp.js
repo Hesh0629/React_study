@@ -5,7 +5,7 @@ const HeshComp = ({ name, children }) => {
 		backgroundColor: '#c0ffee',
 		color: '#79794d',
 		fontWeight: 'bold',
-		padding: 30, 
+		padding: 30,
 	}; //인라인으로 쓰기 싫어,,,
 	return (
 		<div style={inline_style}>
@@ -20,7 +20,7 @@ HeshComp.defaultProps = {
 	children: 'default children',
 };
 HeshComp.propTypes = {
-	name: PropTypes.string.isRequired 
+	name: PropTypes.string.isRequired,
 	// 이러면 name property는 반드시 string 형태로 누락되지 않고전달해야함
 	// unidefined로 보내면 console에서 난리침
 };
