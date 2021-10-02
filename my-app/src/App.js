@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import './App.css';
 import HeshComp from './HeshComp';
 import Counter from './Counter';
+import Say from './Say'
 function App() {
 	const name = '얘는 스크립트입니다';
 	const if_state = 'if문은 못씁니다';
@@ -41,4 +42,7 @@ const HeshComp_f = () => {
 const Counter_f = () => {
 	return <Counter />;
 };
-export default Counter_f;
+const Say_f = () => {
+	return <Say />;
+};
+export default Say_f;
