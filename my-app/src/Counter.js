@@ -1,6 +1,7 @@
 // https://reactjs.org/docs/react-component.html#setstate 비동기 처리와 setState를 잘 정리한 공식홈페이지 글,,
 import React, { Component } from 'react';
 
+// 클래스형 컴포넌트!
 class Counter extends Component {
 	/* constructor(props) {
 		super(props);
@@ -33,8 +34,10 @@ class Counter extends Component {
 							},
 							//setState의 두번째 파라미터로, 값 업데이트 이후에 진행할 콜백함수 등록 가능
 							() => {
-								//얼래리 근데 밑에있는 setState를 통해 업데이트된 값이 나온다. 콜백함수니까 자신이 속한 setState만 처리하고 실행되는거 아닌가...?
-								// 정답은 아니다. setState의 콜백함수는 진짜로 모든 setState의 실행을 마치고 실행되는 함수이다. 그래서 2가 늘어난 최종 결과값을 뿌린다;;
+								//얼래리 근데 밑에있는 setState를 통해 업데이트된 값이 나온다.
+								//콜백함수니까 자신이 속한 setState만 처리하고 실행되는거 아닌가...?
+								// 정답은 아니다. setState의 콜백함수는 진짜로 모든 setState의 실행을 마치고 실행되는 함수이다.
+								//그래서 2가 늘어난 최종 결과값을 뿌린다;;
 								console.log('방금 setState를 호출함 ', this.state);
 							}
 						);

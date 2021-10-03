@@ -1,6 +1,7 @@
 // useState는 setState와 달리 비동기적으로 처리되거나 그런건 없어서 여러번 사용 가능
 import React, { useState } from 'react';
 
+// 함수형 컴포넌트
 const Say = () => {
 	const [message, setMessage] = useState('기본값 넣는 곳'); // ret = {현재상태, 상태바꿀 함수 == 세터함수}
 	const onClickEnter = () => setMessage('안녕하세요!');
