@@ -5,6 +5,7 @@ import Counter from './Counter';
 import Say from './Say';
 import EventPractice_Class from './EventPractice_Class';
 import EventPractice_Function from './EventPractice_Function';
+import ValidationSample from './ValidationSample'
 function App() {
 	const name = '얘는 스크립트입니다';
 	const if_state = 'if문은 못씁니다';
@@ -53,4 +54,7 @@ const EventPractice_Class_f = () => {
 const EventPractice_Function_f = () => {
 	return <EventPractice_Function />
 }
-export default EventPractice_Function_f
+const ValidationSample_f = () => {
+	return <ValidationSample />
+}
+export default ValidationSample_f

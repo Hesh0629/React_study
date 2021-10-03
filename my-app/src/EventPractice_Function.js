@@ -11,7 +11,7 @@ const EventPractice = () => {
 			...form, //form을 복사해와서
 			[e.target.name]: e.target.value, // [e.target.name]만 바꿔주기
 		};
-		setForm(nextForm); //세터함수
+		setForm(nextForm); //세터함수에 위의 있는 nextForm 전달
 	};
 	const onClick = () => {
 		alert(username + ': ' + message);
@@ -28,7 +28,6 @@ const EventPractice = () => {
 	return (
 		<div>
 			<h1>Event Practice</h1>
-			{/*클래스형과 달리 input의 name을 중요하게 쓰진 않는다.*/}
 			<input
 				type="text"
 				name="username"
