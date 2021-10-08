@@ -61,10 +61,11 @@ const ValidationSample_f = () => {
 class ScrollBox_class extends Component {
   render() {
     return (
+      /* 
+        앞으로 this.scrollBox 는 ScrollBox를 가리키게 된다
+        더 나아가 ScrollBox내부에 있는 메서드들을 이용할 수 있다.
+      */
       <div>
-        {/* 앞으로 this.scrollBox 는 ScrollBox를 가리키게 된다
-            더 나아가 ScrollBox내부에 있는 메서드들을 이용할 수 있다.
-        */}
         <ScrollBox ref={(ref) => (this.scrollBox = ref)} />
         <button onClick={() => this.scrollBox.scrollToBottom()}>To Bottom</button>
       </div>
