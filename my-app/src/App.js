@@ -7,6 +7,7 @@ import EventPractice_Class from './EventPractice_Class';
 import EventPractice_Function from './EventPractice_Function';
 import ValidationSample from './ValidationSample';
 import ScrollBox from './ScrollBox';
+import IterationSample from './iterationSample';
 function App() {
   const name = '얘는 스크립트입니다';
   const if_state = 'if문은 못씁니다';
@@ -72,4 +73,11 @@ class ScrollBox_class extends Component {
     );
   }
 }
-export default ScrollBox_class;
+class iterationSample_class extends Component{
+  render(){
+    return (
+      <IterationSample/>
+    );
+  }
+}
+export default iterationSample_class;
