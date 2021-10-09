@@ -73,11 +73,9 @@ class ScrollBox_class extends Component {
     );
   }
 }
-class iterationSample_class extends Component{
-  render(){
-    return (
-      <IterationSample/>
-    );
+class iterationSample_class extends Component {
+  render() {
+    return <IterationSample />;
   }
 }
 export default iterationSample_class;

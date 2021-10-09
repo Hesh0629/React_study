@@ -5,6 +5,7 @@ class ScrollBox extends Component {
 
   scrollToBottom = () => {
     const { scrollHeight, clientHeight } = this.box;
+    // const scrollHeight = this.box.scrollHeight; 와 같은 의미
     this.box.scrollTop = scrollHeight - clientHeight;
   };
 
