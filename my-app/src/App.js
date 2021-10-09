@@ -8,6 +8,10 @@ import EventPractice_Function from './EventPractice_Function';
 import ValidationSample from './ValidationSample';
 import ScrollBox from './ScrollBox';
 import IterationSample from './iterationSample';
+
+import LifeCycleSample from './LifeCycleSample';
+import ErrorBoundary from './ErrorBoundary';
+
 function App() {
   const name = '얘는 스크립트입니다';
   const if_state = 'if문은 못씁니다';
@@ -78,4 +82,31 @@ class iterationSample_class extends Component {
     return <IterationSample />;
   }
 }
-export default iterationSample_class;
+
+function getRandomColor() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
+
+class lifeCycleSample_class extends Component {
+  state = {
+    color: '#000000',
+  };
+
+  handleClick = () => {
+    this.setState({
+      color: getRandomColor(),
+    });
+  };
+
+  render() {
+    return (
+      <>
+        <button onClick={this.handleClick}>Random Color</button>
+        <ErrorBoundary>
+          <LifeCycleSample color={this.state.color} />
+        </ErrorBoundary>
+      </>
+    );
+  }
+}
+export default lifeCycleSample_class;
