@@ -1,7 +1,8 @@
-import React, { Fragment, Component } from 'react';
+import React, { Fragment, Component, useState, useEffect } from 'react';
 import './App.css';
 import HeshComp from './HeshComp';
 import Counter from './Counter';
+import Counter_function from './Counter(function)';
 import Say from './Say';
 import EventPractice_Class from './EventPractice_Class';
 import EventPractice_Function from './EventPractice_Function';
@@ -11,6 +12,8 @@ import IterationSample from './iterationSample';
 
 import LifeCycleSample from './LifeCycleSample';
 import ErrorBoundary from './ErrorBoundary';
+
+import Info from './info';
 
 function App() {
   const name = '얘는 스크립트입니다';
@@ -109,4 +112,25 @@ class lifeCycleSample_class extends Component {
     );
   }
 }
-export default lifeCycleSample_class;
+
+const Info_f = () => {
+  const [visible, setVisible] = useState(false);
+  return (
+    <div>
+      <button
+        onClick={() => {
+          setVisible(!visible);
+        }}
+      >
+        {visible ? '숨기기' : '보이기'}
+      </button>
+      <hr />
+      {visible && <Info />}
+    </div>
+  );
+};
+
+const Counter_function_f = () => {
+  return <Counter_function />;
+};
+export default Info_f;

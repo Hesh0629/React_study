@@ -45,6 +45,7 @@ class LifeCycleSample extends Component {
   };
 
   //컴포넌트 변화를 DOM에 반영하기 바로 직전에 호출. 보통 업데이트 직전에 참고할 일이 있을 때 이용 (스크롤바 유지)
+  //return vlaue는 snapshot으로 밑에 componentDidUpdate에서 이용 가능하다
   getSnapshotBeforeUpdate(prevProps, prevState) {
     console.log('getSnapshotBeforeUpdate');
     if (prevProps.color !== this.props.color) {
@@ -76,7 +77,7 @@ class LifeCycleSample extends Component {
 
     return (
       <div>
-        {this.props.missing.value}
+        {/*this.props.missing.value*/}
         <h1 style={style} ref={(ref) => (this.myRef = ref)}>
           {this.state.number}
         </h1>
