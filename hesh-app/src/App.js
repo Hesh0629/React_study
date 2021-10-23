@@ -14,7 +14,7 @@ import LifeCycleSample from './LifeCycleSample';
 import ErrorBoundary from './ErrorBoundary';
 
 import Info from './info';
-
+import Average from './Average';
 function App() {
   const name = '얘는 스크립트입니다';
   const if_state = 'if문은 못씁니다';
@@ -70,7 +70,7 @@ class ScrollBox_class extends Component {
   render() {
     return (
       /* 
-        앞으로 this.scrollBox 는 ScrollBox를 가리키게 된다
+        앞으로 this.scrollBox 는 ScrollBox 컴포넌트를 가리키게 된다
         더 나아가 ScrollBox내부에 있는 메서드들을 이용할 수 있다.
       */
       <div>
@@ -133,4 +133,7 @@ const Info_f = () => {
 const Counter_function_f = () => {
   return <Counter_function />;
 };
-export default Info_f;
+const Average_f = () => {
+  return <Average />
+};
+export default Average_f;

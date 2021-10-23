@@ -8,6 +8,12 @@ class LifeCycleSample extends Component {
 
   myRef = null;
 
+  handleClick = () => {
+    this.setState({
+      number: this.state.number + 1,
+    });
+  };
+
   /*------------------Mount: DOM이 생성되고 웹에 나타나는 과정------------------------------*/
 
   // 컴포넌트를 새로 만들 때마다 호출되는 클래스 생성자
@@ -37,12 +43,6 @@ class LifeCycleSample extends Component {
     console.log('shouldComponentUpdate', nextProps, nextState);
     return nextState.number % 10 !== 4;
   }
-
-  handleClick = () => {
-    this.setState({
-      number: this.state.number + 1,
-    });
-  };
 
   //컴포넌트 변화를 DOM에 반영하기 바로 직전에 호출. 보통 업데이트 직전에 참고할 일이 있을 때 이용 (스크롤바 유지)
   //return vlaue는 snapshot으로 밑에 componentDidUpdate에서 이용 가능하다

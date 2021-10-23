@@ -16,6 +16,7 @@ const Info = () => {
   const onChange = (e) => {
     // e.target을 reducer함수의 action값으로 넘겨줌
     dispatch(e.target);
+    console.log(e);
   };
 
   //useEffect는 기본적으로 렌더링 될 때 (마운트 포함) 실행되며 그 이후로는 2번째 파라미터에 의해 결정

@@ -4,6 +4,10 @@ class ScrollBox extends Component {
   //box = React.createRef();
 
   scrollToBottom = () => {
+    // DOM 노드가 가긴 값들을 이용
+    // scrollTop: 세로 스크롤바 위치(0~350)
+    // scrollHeight : 스크롤이 있는 박스안의 div 높이 (650)
+    // clientHeight : 스크롤이 있는 박스의 높이 (300)
     const { scrollHeight, clientHeight } = this.box;
     // const scrollHeight = this.box.scrollHeight; 와 같은 의미
     this.box.scrollTop = scrollHeight - clientHeight;
@@ -27,7 +31,6 @@ class ScrollBox extends Component {
     return (
       <div
         style={style}
-        //
         ref={(ref) => {
           this.box = ref;
         }}
