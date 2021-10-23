@@ -15,6 +15,7 @@ import ErrorBoundary from './ErrorBoundary';
 
 import Info from './info';
 import Average from './Average';
+import CSSModule from './CSSModule';
 function App() {
   const name = '얘는 스크립트입니다';
   const if_state = 'if문은 못씁니다';
@@ -134,6 +135,15 @@ const Counter_function_f = () => {
   return <Counter_function />;
 };
 const Average_f = () => {
-  return <Average />
+  return <Average />;
 };
-export default Average_f;
+class CSSModule_f extends Component {
+  render() {
+    return (
+      <div>
+        <CSSModule />
+      </div>
+    );
+  }
+}
+export default CSSModule_f;
