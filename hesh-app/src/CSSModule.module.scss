@@ -1,0 +1,25 @@
+/* 컴포넌트의 스타일 클래스 이름이 겹치는 걸 방지해준다. */
+@import '~open-color/open-color';
+@import '~include-media/dist/include-media';
+.wrapper {
+  background: black;
+  padding: 1rem;
+  color: white;
+  font-size: 2rem;
+  // inverted를 wrapper가 이용될 때만 사용
+  &.inverted {
+    color: black;
+    background: $oc-gray-2;
+    @include media('<1000px') {
+      background: $oc-gray-9;
+    }
+    border: 3px solid black;
+  }
+}
+
+:global {
+  .something {
+    font-weight: 500;
+    color: aqua;
+  }
+}
