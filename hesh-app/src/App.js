@@ -16,6 +16,8 @@ import ErrorBoundary from './ErrorBoundary';
 import Info from './info';
 import Average from './Average';
 import CSSModule from './CSSModule';
+import StyledComponent from './StyledComponent';
+import SassComponent from './SassComponent.scss';
 function App() {
   const name = '얘는 스크립트입니다';
   const if_state = 'if문은 못씁니다';
@@ -145,5 +147,27 @@ class CSSModule_f extends Component {
       </div>
     );
   }
-}
-export default CSSModule_f;
+};
+class StyledComponent_f extends Component{
+  render(){
+    return (
+      <div>
+        <StyledComponent />
+      </div>
+    );
+  }
+};
+const SassComponent_f = () => {
+  return (
+    <div className="SassComponent">
+      <div className="box red" />
+      <div className="box orange" />
+      <div className="box yellow" />
+      <div className="box green" />
+      <div className="box blue" />
+      <div className="box indigo" />
+      <div className="box violet" />
+    </div>
+  );
+};
+export default StyledComponent_f;
