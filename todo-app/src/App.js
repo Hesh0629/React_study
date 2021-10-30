@@ -22,23 +22,37 @@ const App = () => {
     },
   ]);
   const nextId = useRef(4);
-  
+
   const onInsert = useCallback(
-    text => {
+    (text) => {
       const todo = {
         id: nextId.current,
         text,
         checked: false,
       };
       setTodos(todos.concat(todo));
-      nextId.current +=1;
+      nextId.current += 1;
     },
-    [todos],
+    [todos]
+  );
+
+  const onRemove = useCallback(
+    (id) => {
+      setTodos(todos.filter((todo) => todo.id !== id));
+    },
+    [todos]
+  );
+
+  const onToggle = useCallback(
+    (id) => {
+      setTodos(todos.map((todo) => (todo.id === id ? { ...todo, checked: !todo.checkde } : todo)));
+    },
+    [todos]
   );
   return (
     <TodoTemplate>
-      <TodoInsert onInsert={onInsert}/>
-      <TodoList todos={todos} />
+      <TodoInsert onInsert={onInsert} />
+      <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
     </TodoTemplate>
   );
 };

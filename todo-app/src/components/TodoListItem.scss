@@ -5,7 +5,6 @@
   &:nth-child(even) {
     background: #e5dcc3;
   }
-
   .checkbox {
     cursor: pointer;
     display: flex;
@@ -22,10 +21,12 @@
     &.checked {
       svg {
         color: #aaa492;
+        transition: all 1s ease-in;
       }
       .text {
         color: #9a9483;
         text-decoration: line-through;
+        transition: all 0.3s ease-in;
       }
     }
   }
@@ -36,7 +37,8 @@
     color: #ff6b6b;
     cursor: pointer;
     &:hover {
-      color: #ff8787;
+      color: #950101;
+      transition: all 1s ease-out;
     }
   }
   // 엘리먼트 사이에 테두리 넣기
