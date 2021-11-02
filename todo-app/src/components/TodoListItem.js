@@ -18,4 +18,5 @@ const TodoListItem = ({ todo, onRemove, onToggle }) => {
   );
 };
 
-export default TodoListItem;
+export default React.memo(TodoListItem); //props가 바뀌지 않으면 리렌더링 되지 않는다.
+// 만약 불변성을 지켜주지 않는다면 React.memo에서 props가 바뀌더라도 같다고 인식해서 성능저하가 발생가능!
