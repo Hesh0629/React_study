@@ -12,6 +12,7 @@ const TodoList = ({ todos, onRemove, onToggle }) => {
     </div>
   );*/
   const rowRenderer = useCallback(
+    //index, key, style모두 객체로 알아서 받아옴.
     ({ index, key, style }) => {
       const todo = todos[index];
       return (
@@ -29,7 +30,7 @@ const TodoList = ({ todos, onRemove, onToggle }) => {
       rowHeight={57}
       rowRenderer={rowRenderer}
       list={todos}
-      style={{ outline: 'none' }}
+      style={{ outline: 'none' }} // 기본적으로 적용되는 outline은 지워야함
     />
   );
 };
