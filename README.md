@@ -6,7 +6,7 @@
 
 ## ref 📘
 - 구름 IDE에서 리액트 이용하기 : https://oopaque.tistory.com/191
-- Styled-components와 tagged 템플릿 리터럴 : https://styled-components.com/docs/advanced
+- Styled-components와 tagged 템플릿 리터럴 : https://styled-components.com/docs/advanced#tagged-template-literals
 - flex에 대해 잘 정리한 글 : https://studiomeal.com/archives/197  
 
 ## Design : 🖌️
