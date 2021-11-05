@@ -1,6 +1,5 @@
 import React from 'react';
 import WithRouterSample from './WithRouterSample';
-import { withRouter } from 'react-router-dom';
 
 const data = {
   hesh: {
@@ -31,4 +30,4 @@ const Profile = ({ match }) => {
   );
 };
 
-export default withRouter(Profile);
+export default Profile;
