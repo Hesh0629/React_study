@@ -1,5 +1,6 @@
 import React from 'react';
 import WithRouterSample from './WithRouterSample';
+import { withRouter } from 'react-router-dom';
 
 const data = {
   hesh: {
@@ -18,7 +19,7 @@ const Profile = ({ match }) => {
   if (!profile) {
     return <div>none exist user</div>;
   }
-  //withRouter는 현재 컴포넌트가 자신을 보여주고 있으므로 match를 전달받음
+  //withRouter는 자신을 보여주는 컴포넌트에서 파라미터를 전달 받음
   return (
     <div>
       <h3>
@@ -30,4 +31,4 @@ const Profile = ({ match }) => {
   );
 };
 
-export default Profile;
+export default withRouter(Profile);
