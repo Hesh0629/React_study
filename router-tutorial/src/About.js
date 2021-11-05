@@ -1,6 +1,7 @@
 import React from 'react';
 import qs from 'qs';
 const About = ({ location }) => {
+  //url 쿼리는 location.search에 위치한다.
   const query = qs.parse(location.search, {
     ignoreQueryPrefix: true,
   });
