@@ -8,7 +8,7 @@
 - 구름 IDE에서 리액트 이용하기 : <br> https://oopaque.tistory.com/191
 - Styled-components와 tagged 템플릿 리터럴 : <br> https://styled-components.com/docs/advanced#tagged-template-literals
 - flex에 대해 잘 정리한 글 : <br> https://studiomeal.com/archives/197  
-- Hook 관련 React 공식 Docs : <br> https://ko.reactjs.org/docs/hooks-intro.html
+- Hook 관련 React 공식 Docs : <br> https://ko.reactjs.org/docs/hooks-intro.html <br> https://ko.reactjs.org/docs/hooks-reference.html (Hooks API Reference)
 
 ## Design : 🖌️
 - Adobe Color : <br> https://color.adobe.com/ko/create/color-wheel
