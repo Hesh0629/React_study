@@ -147,16 +147,16 @@ class CSSModule_f extends Component {
       </div>
     );
   }
-};
-class StyledComponent_f extends Component{
-  render(){
+}
+class StyledComponent_f extends Component {
+  render() {
     return (
       <div>
         <StyledComponent />
       </div>
     );
   }
-};
+}
 const SassComponent_f = () => {
   return (
     <div className="SassComponent">
@@ -170,4 +170,46 @@ const SassComponent_f = () => {
     </div>
   );
 };
-export default StyledComponent_f;
+const Promise_async_await = () => {
+  function increase(number) {
+    const promise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const result = number + 10;
+        if (result > 50) {
+          const e = new Error('NumberTooBig');
+          return reject(e);
+        }
+        resolve(result);
+      }, 1000);
+    });
+    return promise;
+  }
+
+  async function asdf() {
+    try {
+      let result = await increase(0);
+      console.log(result);
+      result = await increase(result);
+      console.log(result);
+      result = await increase(result);
+      console.log(result);
+      result = await increase(result);
+      console.log(result);
+      result = await increase(result);
+      console.log(result);
+      result = await increase(result);
+      console.log(result);
+      result = await increase(result);
+      console.log(result);
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  return (
+    <div>
+      <div>this is for practicing Promise, async, await</div>
+      <button onClick={asdf}>push</button>
+    </div>
+  );
+};
+export default Promise_async_await;
