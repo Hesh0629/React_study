@@ -172,6 +172,7 @@ const SassComponent_f = () => {
 };
 const Promise_async_await = () => {
   function increase(number) {
+    // 성공 : resolve, 실패 : reject
     const promise = new Promise((resolve, reject) => {
       setTimeout(() => {
         const result = number + 10;
@@ -182,9 +183,12 @@ const Promise_async_await = () => {
         resolve(result);
       }, 1000);
     });
+    
+    //promise 객체를 반환해줘야한다.
     return promise;
   }
-
+  
+  // functio앞에 async를 붙인다.
   async function asdf() {
     try {
       let result = await increase(0);
@@ -204,6 +208,7 @@ const Promise_async_await = () => {
     } catch (e) {
       console.log(e);
     }
+    // 실제로는 비동기적으로 실행되고 있지만 마치 순차실행을 구현한 것 처럼 보인다.
   }
   return (
     <div>
