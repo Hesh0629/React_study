@@ -58,7 +58,7 @@ render();
 // 상태가 업데이트될 때 마다 render함수 실행
 store.subscribe(render);
 
-// 짜잔 onClick이 아니라 onclick 이랍니다.
+// 짜잔 'onClick'이 아니라' 'onclick' 이랍니다.
 divToggle.onclick = () => {
   store.dispatch(toggleSwitch());
 };
