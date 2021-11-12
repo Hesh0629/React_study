@@ -7,7 +7,7 @@ import SelectColors from './components/SelectColors';
 // Ref: https://ko.reactjs.org/docs/context.html
 const App = () => {
   return (
-    //Provider를 이용하여 Context의 value를 변경할 수 있다.
+    //Provider로 묶어주면 내부에 있는 Context의 value를 변경할 수 있다.
     <ColorProvider>
       <div>
         <SelectColors />

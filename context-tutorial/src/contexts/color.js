@@ -8,6 +8,7 @@ const ColorContext = createContext({
   },
 });
 
+//Provider를 새로 짜는 방법. provider는 value를 반드시 써줘야한다.
 const ColorProvider = ({ children }) => {
   const [color, setColor] = useState('#c0ffee');
   const [subcolor, setSubcolor] = useState('#B4FE98');
