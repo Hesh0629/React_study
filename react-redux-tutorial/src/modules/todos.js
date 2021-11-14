@@ -1,12 +1,17 @@
+import { createAction } from 'redux-actions'
+
 const CHANGE_INPUT = 'todos/CHANGE_INPUT'; //input 값 변경
 const INSERT = 'todos/INSERT'; // 새로운 todo 등록
 const TOGGLE = 'todos/TOGGLE'; // todo를 체크/해제
 const REMOVE = 'todos/REMOVE'; // todo를 제거
 
+/*
 export const changeInput = (input) => ({
   type: CHANGE_INPUT,
   input,
 });
+
+
 let id = 3;
 
 export const insert = (text) => ({
@@ -27,7 +32,20 @@ export const remove = (id) => ({
   type: REMOVE,
   id,
 });
+*/
 
+//createAction에서 첫번째 파라미터는 type으로, 이후로 오는 파라미터는 payload로 불린다
+export const changeInput = createAction(CHANGE_INPUT,input=>input);
+
+let id = 3;
+export const insert = createAction(INSERT, text => ({
+  id:id++,
+  text,
+  done: false,
+}))
+
+export const toggle = createAction(TOGGLE,id=>id);
+export const remove = createAction(REMOVE,id=>id);
 const initialState = {
   input: '',
   todos: [
