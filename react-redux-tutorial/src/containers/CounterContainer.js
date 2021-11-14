@@ -46,5 +46,5 @@ export default connect(
   })
 )(CounterContainer);
 */
-
+// useSelector를 이용하게되면 connect와 달리 부모컴포넌트가 업뎃되도 자신의 props만 안바뀌면 리렌더링을 방지해주는 기능이 사라진다.
 export default React.memo(CounterContainer);
