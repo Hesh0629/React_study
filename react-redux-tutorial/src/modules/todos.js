@@ -1,4 +1,4 @@
-import { createAction } from 'redux-actions'
+import { createAction, handleActions } from 'redux-actions';
 
 const CHANGE_INPUT = 'todos/CHANGE_INPUT'; //input 값 변경
 const INSERT = 'todos/INSERT'; // 새로운 todo 등록
@@ -35,17 +35,17 @@ export const remove = (id) => ({
 */
 
 //createAction에서 첫번째 파라미터는 type으로, 이후로 오는 파라미터는 payload로 불린다
-export const changeInput = createAction(CHANGE_INPUT,input=>input);
+export const changeInput = createAction(CHANGE_INPUT, (input) => input);
 
 let id = 3;
-export const insert = createAction(INSERT, text => ({
-  id:id++,
+export const insert = createAction(INSERT, (text) => ({
+  id: id++,
   text,
   done: false,
-}))
+}));
 
-export const toggle = createAction(TOGGLE,id=>id);
-export const remove = createAction(REMOVE,id=>id);
+export const toggle = createAction(TOGGLE, (id) => id);
+export const remove = createAction(REMOVE, (id) => id);
 const initialState = {
   input: '',
   todos: [
@@ -62,6 +62,7 @@ const initialState = {
   ],
 };
 
+/*
 function todos(state = initialState, action) {
   switch (action.type) {
     case CHANGE_INPUT:
@@ -90,5 +91,25 @@ function todos(state = initialState, action) {
       return state;
   }
 }
+*/
 
+const todos = handleActions(
+  {
+    // action이 올 자리에 {payload: input}을 넣어줘서 action.input=payload와 같은 의미로 이용하였다.
+    [CHANGE_INPUT]: (state, { payload: input }) => ({ ...state, input }),
+    [INSERT]: (state, { payload: todo }) => ({
+      ...state,
+      todos: state.todos.concat(todo),
+    }),
+    [TOGGLE]: (state, { payload: id }) => ({
+      ...state,
+      todos: state.todos.map((todo) => (todo.id === id ? { ...todo, done: !todo.done } : todo)),
+    }),
+    [REMOVE]: (state, { payload: id }) => ({
+      ...state,
+      todos: state.todos.filter((todo) => todo.id !== id),
+    }),
+  },
+  initialState
+);
 export default todos;
