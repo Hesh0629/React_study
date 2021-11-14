@@ -47,4 +47,4 @@ export default connect(
 )(CounterContainer);
 */
 
-export default CounterContainer;
+export default React.memo(CounterContainer);
