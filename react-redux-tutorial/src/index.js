@@ -11,6 +11,7 @@ import rootReducer from './modules';
 const store = createStore(rootReducer, composeWithDevTools());
 
 ReactDOM.render(
+  //App 컴포넌트를 Provider로 싸줘야 store를 이용할 수 있음
   <Provider store={store}>
     <App />
   </Provider>,
