@@ -5,7 +5,7 @@ import { increase, decrease } from '../modules/counter';
 
 const CounterContainer = () => {
   const number = useSelector((state) => state.counter.number);
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
   return (
     <Counter
       number={number}
