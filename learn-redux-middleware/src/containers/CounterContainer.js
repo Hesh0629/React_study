@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Counter from '../components/Counter';
-import { increase, decrease } from '../modules/counter';
+import { increaseAsync, decreaseAsync } from '../modules/counter';
 
 const CounterContainer = () => {
   const number = useSelector((state) => state.counter.number);
@@ -9,8 +9,8 @@ const CounterContainer = () => {
   return (
     <Counter
       number={number}
-      onIncrease={() => dispatch(increase())}
-      onDecrease={() => dispatch(decrease())}
+      onIncrease={() => dispatch(increaseAsync())}
+      onDecrease={() => dispatch(decreaseAsync())}
     />
   );
 };
