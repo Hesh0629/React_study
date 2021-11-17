@@ -12,6 +12,7 @@ const GET_USERS_FAILURE = 'sample/GET_USERS_FAILURE';
 export const getPost = (id) => async (dispatch) => {
   dispatch({ type: GET_POST });
   try {
+    // api에서 post를 받아올 때 까지 기다려야함으로 async / await 사용
     const response = await api.getPost(id);
     dispatch({
       type: GET_POST_SUCCESS,
@@ -31,6 +32,7 @@ export const getPost = (id) => async (dispatch) => {
 export const getUsers = () => async (dispatch) => {
   dispatch({ type: GET_USERS });
   try {
+    // api에서 post를 받아올 때 까지 기다려야함으로 async / await 사용
     const response = await api.getUsers();
     dispatch({
       type: GET_USERS_SUCCESS,
