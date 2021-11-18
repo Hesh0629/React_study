@@ -15,7 +15,7 @@ const Sample = ({ loadingPost, loadingUsers, post, users }) => {
       </section>
       <hr />
       <section>
-        <h1>Post</h1>
+        <h1>Users</h1>
         {loadingUsers && 'loading,,,'}
         {!loadingUsers && users && (
           <ul>
