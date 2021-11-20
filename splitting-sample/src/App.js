@@ -4,6 +4,7 @@ import './App.css';
 
 function App () {
   const onClick = () => {
+    // 필요할 때 notify 파일을 불러와서 이용함. 기존에는 분리된 상태였음
     import('./notify').then(result => result.default());
   };
   return(
