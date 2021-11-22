@@ -1,6 +1,8 @@
 const Koa = require('koa');
 const Router = require('koa-router');
 
+const api = require('./api');
+
 const app = new Koa();
 const router = new Router();
 
@@ -28,6 +30,7 @@ app.use((ctx) => {
 });
 */
 
+/*
 // router.get(<경로>, 미들웨어 함수)
 router.get('/', (ctx) => {
   ctx.body = 'Home';
@@ -46,6 +49,9 @@ router.get('/posts', (ctx) => {
   const { id } = ctx.query; // 쿼리를 들고옴
   ctx.body = id ? `포스트 ${id}` : `포스트 아이디가 없습네다`;
 });
+*/
+
+router.use('/api', api.routes());
 
 app.use(router.routes()).use(router.allowedMethods());
 
